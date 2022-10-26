@@ -96,11 +96,11 @@ class EmployeeController extends Controller
             'employeeName' => 'required'
         ]);
 
-        if ($employee_name == $request->employeeName){
+        if ($employee_name == $request->employeeName){ 
             
             $employee = DB::table('employees')
                 ->where('first_name', $employee_name);
-            $employeeM = $employee->first();
+            $employeeM = $employee->first(); 
 
             $employee->delete();
 
@@ -113,6 +113,8 @@ class EmployeeController extends Controller
     public function searchEmployee(Request $request){
         $employees = DB::table('employees')
             ->where('first_name', $request->search)
+            ->orWhere('last_name', $request->search)
+            ->orWhere('department_name', $request->search)
             ->leftJoin('departments', 'employees.department_id', '=', 'departments.department_id')
             ->get();
         
