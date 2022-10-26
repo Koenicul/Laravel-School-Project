@@ -16,7 +16,7 @@
                     <td><input type="text" class="form-control" name="last_name" placeholder="last_name" value="{{old('last_name')}}"></td>
                     <td>
                         <select name="department_id" class="form-control">
-                            <option value="">None</option>
+                            <option value="0">None</option>
                             <option value="110">Accounting</option>
                             <option value="10">Administration</option>
                             <option value="90">Executive</option>
