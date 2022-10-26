@@ -20,7 +20,7 @@
                 <td>
                     <select name="department_id" class="form-control">
                         <option value="{{$employee->department_id}}" hidden>{{$employee->department_name}}</option>
-                        <option value="">None</option>
+                        <option value="0">None</option>
                         <option value="110">Accounting</option>
                         <option value="10">Administration</option>
                         <option value="90">Executive</option>
@@ -43,7 +43,9 @@
     
 
     <form method="post" action="{{route('deleteEmployee', $employee->first_name)}}">
+        
         @csrf
+
         <div class="row">
             <div class="col">
                 <input type="text" class="form-control" name="employeeName" placeholder="Enter First Name">
