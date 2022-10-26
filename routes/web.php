@@ -21,3 +21,6 @@ Route::get('/employees/view/{employee_id}', [EmployeeController::class, 'viewEmp
 Route::post('/employees/edit/{employee_id}', [EmployeeController::class, 'editEmployee'])->name('editEmployee');
 Route::post('/employees/delete/{employee_id}', [EmployeeController::class, 'deleteEmployee'])->name('deleteEmployee');
 Route::post('/employees/search', [EmployeeController::class, 'searchEmployee'])->name('searchEmployee');
+Route::get('/laravel', function(){
+    return view('welcome');
+})->name('laravel');
