@@ -26,7 +26,7 @@
 <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
     <div class="container">
         <a class="navbar-brand" href="{{ url('/') }}">
-            Employees
+            Koen
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
             <span class="navbar-toggler-icon"></span>
@@ -43,7 +43,8 @@
                                 Pages
                             </a>
                             <ul class="dropdown-menu">
-                                <li><a href="{{ url('/') }}" class="dropdown-item">Home</a></li>
+                                <li><a href="{{ url('/') }}" class="dropdown-item">Employees</a></li>
+                                <li><a href="{{ url('todo') }}" class="dropdown-item">Tasks</a></li>
                                 <li><a href="{{ url('laravel') }}" class="dropdown-item">Laravel</a></li>
                             </ul>
                         </li>
