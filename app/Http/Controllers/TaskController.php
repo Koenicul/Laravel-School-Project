@@ -29,6 +29,7 @@ class TaskController extends Controller
     public function showTasks(){
         $tasks = DB::table('tasks')
             ->leftJoin('categories', 'tasks.category', '=', 'categories.category_id')
+            ->orderBy('completed', 'ASC')
             ->get();
 
         return view('todo', compact('tasks'));
